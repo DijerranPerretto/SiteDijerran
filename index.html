@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dijerran CV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao meu site!</h1>
+    </header>
+
+    <!-- Abas e suas funcionalidades -->
+    <div class="tab-container">
+        
+        
+        <nav class="tabs">
+            <button class="tablink active" onclick="openTab(event, 'sobre-mim')">Sobre Mim</button>
+            <button class="tablink" onclick="openTab(event, 'formacao')">Formação</button>
+            <button class="tablink" onclick="openTab(event, 'portfolio')">Portfólio</button>
+            <button class="tablink" onclick="openTab(event, 'contato')">Contato</button>
+        </nav>
+
+        <!-- Sobre Mim -->
+        <section id="sobre-mim" class="tabcontent">
+            <h2>Sobre Mim</h2>
+            <p>Oi,tudo bem? Meu nome é Dijerran Perretto, tenho atualmente 23 anos, sou um dev iniciante apaixonado pelo ramo de tecnologia, com um grande foco em Phyton atualmente. No meu tempo livre gosto de passar jogando, vendo animes, e jogando RPG de mesa.</p>
+        </section>
+
+        <!-- Formação e cursos -->
+        <section id="formacao" class="tabcontent" style="display:none;">
+            <h2>Formação</h2>
+            <p>Estou atualmente cursando Análise e Desenvolvimento de Sistemas (ADS) pela Uninter. Além disso, falo portugues como lingua nativa, inglês em nivel intermediario, e estou aprendendo Alemão nas horas vagas.</p>
+            <p> Também possuo alguns cursos pela Alura, indo desde CSS e HTML até mesmo Blender. Você pode checar mais minhas qualificações no meu perfil do Linkedin. </p>
+        </section>
+
+        <!-- Portifólio com link do GhitHub -->
+        <section id="portfolio" class="tabcontent" style="display:none;">
+            <h2>Portfólio</h2>
+            <ul>
+                <li><a href="https://github.com/DijerranPerretto/Freeway" target="_blank">Freeway</a></li>
+                <li><a href="https://github.com/DijerranPerretto/Calculadora-PHP" target="_blank">Calculadora</a></li>
+                <li><a href="https://github.com/DijerranPerretto/PongJs" target="_blank">Pong</a></li>
+            </ul>
+        </section>
+
+        <!-- Info Contato -->
+        <section id="contato" class="tabcontent" style="display:none;">
+            <h2>Contato</h2>
+            <form action="#" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Firula do footer -->
+    <footer>
+        <p>&copy; 2024 Dijerran Perretto.</p>
+    </footer>
+
+    <!-- Alternar entre abas -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            openTab(event, 'sobre-mim');
+        });
+        function openTab(evt, tabName) {
+        
+            var tabcontent = document.getElementsByClassName("tabcontent");
+            for (var i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            var tablinks = document.getElementsByClassName("tablink");
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

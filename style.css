@@ -1,0 +1,104 @@
+/* Estilo Geral */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #3a4b70;
+    color: #333;
+    height: 100%;
+}
+
+/* Cores do cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Caixa das abas  */
+.tab-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #dadde3;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Abas e seus estilos */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    background-color: #007BFF;
+    border-bottom: 1px solid #ccc;
+}
+
+.tablink {
+    background-color: #007BFF;
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #fff;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.tablink:hover {
+    background-color: #0056b3;
+}
+
+.tablink.active {
+    background-color: #0056b3;
+}
+
+/* Conteudo das abas */
+.tabcontent {
+    display: none;
+    padding: 20px;
+}
+
+/* Contato*/
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    resize: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Rodapé e seu estilo */
+footer {
+    text-align: center;
+    padding: 1px 0;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
